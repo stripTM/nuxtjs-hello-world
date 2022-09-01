@@ -1,8 +1,9 @@
 <template>
   <div>
-    <p>Hi from {{ name }}</p>
+    <h1>Acerca de</h1>
+    <p>Hola desde {{ name }}</p>
     <NLink to="/">
-      Home page
+      Portadas
     </NLink>
   </div>
 </template>
@@ -11,11 +12,11 @@
 export default {
   asyncData () {
     return {
-      name: process.static ? 'static' : (process.server ? 'server' : 'client')
+      name: process.static ? 'Estático' : (process.server ? 'server' : 'Cliente')
     }
   },
   head: {
-    title: 'About page'
+    title: 'Página de acerca de'
   }
 }
 </script>
