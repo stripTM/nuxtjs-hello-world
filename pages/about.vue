@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Acerca de</h1>
-    <p>Hola desde {{ name }}</p>
+    <p>Hola desde <em>{{ name }}</em></p>
     <NLink to="/">
       Portadas
     </NLink>
@@ -12,7 +12,7 @@
 export default {
   asyncData () {
     return {
-      name: process.static ? 'Estático' : (process.server ? 'server' : 'Cliente')
+      name: process.static ? 'estático' : (process.server ? 'servidor' : 'cliente')
     }
   },
   head: {
